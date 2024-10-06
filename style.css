@@ -1,0 +1,346 @@
+/* Réinitialisation des marges et paddings pour tous les éléments */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Police et style général */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    
+}
+
+/* Section principale avec image de fond */
+.main {
+    width: 100%;
+    background-image: url(photos/math4.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+/* Section principale avec image de fond */
+.mains{
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+/* Style général pour les sections de contenu */
+.content {
+    max-width: 800px; /* Limite la largeur pour un meilleur aspect */
+    padding: 20px; /* Ajoute un peu d'espace autour */
+    text-align: center; /* Centre le texte à l'intérieur */
+    width: 100%;
+    margin: 0 auto;
+    font-family: Arial;
+    box-sizing: border-box;
+    
+}
+.content .par{
+    /*
+    text-align: center;
+    color: black;
+    font-size: large;*/
+    font-size: 1.2em; /* Taille de police légèrement plus grande */
+    margin-bottom: 30px; /* Espacement sous le paragraphe */
+    line-height: 1.8; /* Espacement entre les lignes pour une meilleure lisibilité */
+    text-align: justify; /* Texte justifié pour un alignement plus professionnel */
+    color: black;
+    text-align: center;
+}
+.content .cn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.content .cn a {
+    font-size: large;
+    text-decoration: none;
+}
+
+.content .cn:hover {
+    background-color: #000;
+    transform: scale(1.05); /* Agrandir légèrement les icônes au survol */
+    transition: transform 0.3s ease;
+}
+
+/* Style des icônes */
+.content .social-icons a {
+    color: #ff7200; /* Couleur des icônes */
+    font-size: 40px; /* Taille des icônes */
+    margin: 0 15px; /* Espace entre les icônes */
+    transition: transform 0.3s ease; /* Animation pour l'effet au survol */
+}
+
+/* Effet au survol des icônes */
+.content .social-icons a:hover {
+    transform: scale(1.05); /* Agrandir légèrement les icônes au survol */
+    color: #ff5500;
+    transition: transform 0.3s ease;
+}
+/* Styles de base pour tout le contenu */
+/* Styles globaux */
+.contents {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 800px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    max-width: 1200px; /* Limiter la largeur du contenu pour plus de lisibilité */
+}
+
+/* Section principale : flexbox pour aligner les sections */
+.contents .Parcours, .contents .competance {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0; /* Espacement entre les sections */
+    padding: 40px 0;
+    border-bottom: 2px solid #f0f0f0; /* Ligne séparatrice discrète */
+}
+
+/* Sections texte et photos : partage de la largeur */
+.contents .Parcours .texte, .contents .competance .texte,
+.contents .Parcours .photos, .contents .competance .photos{
+    width: 48%; /* Chaque section occupe environ la moitié de l'espace */
+}
+.contents .objectif .texte, .contents .objectif .photos{
+    width: 100%;
+}
+/* Section objectif avec image pleine largeur mais hauteur limitée */
+.contents .objectif .photos img {
+    width: 100%; /* Laisse l'image garder ses proportions en largeur */
+    height: auto; /* Laisse l'image garder ses proportions en hauteur */
+    max-height: 5cm; /* Limite la hauteur de l'image à 3 centimètres */
+    transform-origin: center; /* Dézoom à partir du centre de l'image */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour l'image */
+}
+
+/* Style des titres */
+.contents h2 {
+    font-size: 2.5rem;
+    color: #ff7200;
+    margin-bottom: 20px;
+}
+/* Style du texte */
+.contents p {
+    text-align: center;
+    line-height: 1.6;
+    color: black;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+/* Centrage des images */
+.contents .photos {
+    display: flex; /* Utiliser flexbox pour centrer */
+    justify-content: center;
+    align-items: center;
+    
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1); /* Ombre légère pour un effet 3D 0 4px 10px*/
+    width: 100%;
+}
+/* Images centrées et ajustées */
+.contents .photos img {
+    width: 100%; /* Image prend la largeur maximale disponible */
+    height: auto; /* Maintenir les proportions de l'image */
+    border-radius: 2rem;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1); /* Ombre pour l'image  0 4px 8px*/
+}
+
+
+
+/* Animation au survol */
+.contents .photos:hover img {
+    transform: scale(1.02); /* Zoom léger au survol */
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+/* Navigation */
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar .logo {
+    width: 100px;
+    height: 100px;
+}
+
+/* Menu */
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    margin-left: 30px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.menu ul li a:hover {
+    color: white;
+}
+.menu ul li a p {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.menu ul li a p:hover {
+    color: #ff5500;
+}
+
+/* Barre de recherche */
+.search input.srch {
+    padding: 10px;
+    border: 1px solid #ff7200;
+    border-radius: 5px 0 0 5px;
+    background-color: whitesmoke;
+    width: 200px;
+}
+
+.search button.btn {
+    background: white;
+    padding: 10px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: gray;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search button.btn:hover {
+    background-color: black;
+    transform: scale(1.05); /* Agrandir légèrement les icônes au survol */
+    transition: transform 0.3s ease;
+}
+
+/* Titres */
+h1 {
+    margin-bottom: 30px; /* Ajoute un espacement en dessous des titres */
+}
+
+/* Pour les boutons */
+.btn {
+    display: inline-block; /* Permet d'appliquer du padding et des marges */
+    padding: 10px 20px;
+    color: white;
+    background-color: #ff7200; /* Couleur de fond */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    text-decoration: none; /* Enlève le soulignement */
+    transition: background 0.3s; /* Transition de couleur au survol */
+}
+
+.btn:hover {
+    background-color: #ff5500; /* Couleur de fond au survol */
+}
+/* Style pour le formulaire */
+form {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments en colonne */
+    align-items: center; /* Centre les éléments horizontalement */
+    margin-top: 20px; /* Ajoute un espacement au-dessus */
+}
+
+
+
+form a {
+    color: blue; /* Couleur des icônes */
+    font-size: 25px; /* Agrandit la taille des icônes */
+}
+
+form input, form textarea {
+    width: 400px; /* Largeur relative pour s'adapter à l'écran */
+    height: 60px;
+    padding: 20px; /* Espacement interne */
+    margin: 1px; /* Espacement entre les éléments */
+    border-radius: 5px; /* Coins arrondis */
+    border: 1px solid #ccc; /* Bordure gris clair */
+}
+
+/* Style du bouton d'envoi */
+form button {
+    background-color: #ff7200; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 10px 20px; /* Espacement interne */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Change le curseur */
+    transition: background 0.3s; /* Transition de couleur au survol */
+}
+
+form button:hover {
+    background-color: #ff5500;/* Couleur au survol */
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search {
+        margin-top: 10px;
+    }
+    .contents .Parcours, .contents .competance, .contents.objectif {
+        flex-direction: column; /* Colonne pour petits écrans */
+        text-align: center; /* Texte centré en mode colonne */
+
+    }
+
+    /* Chaque colonne occupe 100% de la largeur sur mobile */
+    .contents .Parcours .texte, .contents .Parcours .photos, 
+    .contents .competance .texte, .contents .competance .photos, 
+    .contents .objectif .texte, .contents .objectif .photos {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+}
