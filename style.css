@@ -215,7 +215,7 @@ body {
 }
 
 .menu ul li a:hover {
-    color: white;
+    color: #ff7200;
 }
 .menu ul li a p {
     text-decoration: none;
@@ -225,7 +225,18 @@ body {
 }
 
 .menu ul li a p:hover {
-    color: #ff5500;
+    color: #f4f4f4;
+}
+/* Style pour le bouton hamburger */
+.hamburger {
+    display: none; /* Caché par défaut */
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Lorsque le menu est ouvert */
+.menu.open {
+    display: block;
 }
 
 /* Barre de recherche */
@@ -369,30 +380,65 @@ form button:hover {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navbar {
+    .menu ul {
+        display: none; /* Cache le menu en mobile */
         flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 1;
+    }
+    .menu ul li a p:hover {
+        color: #ff5500;
+    }
+    
+    .menu.open ul {
+        display: block; /* Affiche le menu quand il est ouvert */
     }
 
-    .menu ul {
-        flex-direction: column;
+    .hamburger {
+        
+        display: block; /* Affiche le bouton hamburger en mobile */
+    }
+
+    .navbar {
+        justify-content: space-between;
         align-items: center;
     }
 
+    .menu ul li {
+        margin: 15px 0; /* Espacement vertical entre les éléments */
+    }
+
     .search {
-        margin-top: 10px;
+        margin-top: 50px;
     }
-    .contents .Parcours, .contents .competance, .contents.objectif {
-        flex-direction: column; /* Colonne pour petits écrans */
-        text-align: center; /* Texte centré en mode colonne */
-
+   
+    
+    .contents .texte .contents .photos {
+        padding: 10px;
+        font-size: 12px;
+        flex-direction: column;
     }
 
-    /* Chaque colonne occupe 100% de la largeur sur mobile */
-    .contents .Parcours .texte, .contents .Parcours .photos, 
-    .contents .competance .texte, .contents .competance .photos, 
-    .contents .objectif .texte, .contents .objectif .photos {
-        width: 100%;
-        margin-bottom: 20px;
+    .port h4, .contents h2, .content h1{
+        font-size: 16px;
+    }
+
+    .contents p, .port p, .content .par{
+        font-size: 14px;
+    }
+
+    
+   
+    .hamburger {
+        display: block;
+    }
+
+    .contents .Parcours {
+        margin-top: 40px;
     }
     
 }
