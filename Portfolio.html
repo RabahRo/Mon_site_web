@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="À propos de Rabah Djebra, étudiant en Master en Modélisation et Analyse Numérique à l'UFR des Sciences de Montpellier.">
+    <meta name="keywords" content="Data Science, Machine Learning, Optimisation, Recherche Opérationnelle, Rabah Djebra, Montpellier, Data Analyst">
+    <meta name="author" content="Rabah Djebra">
+    <title>Portfolio - Rabah Djebra</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="mains">
+    <div class="navbar">
+        <div class="icon" hidden>
+            <img src="photos/logo1.png" class="logo" alt="Logo de Rabah Djebra">
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html"><p>Accueil</p></a></li>
+                <li><a href="a-propos.html"><p>À propos</p></a></li>
+                <li><a href="Portfolio.html"><p>Portfolio</p></a></li>
+                <li><a href="contact.html"><p>Contact</p></a></li>
+                
+            </ul>
+        </div>
+        <div class="hamburger">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+    </div>
+
+    <div class="port">
+        <!--<h1 id="about">À propos</h1>-->
+
+            <div class="txt">
+                <h3>PROJETS</h3>
+                <ul>
+                    <li>
+                        <h4> Projet sur la méthode des Eléments Finis Cas P1 Lagrange 1D</h4>
+                        <p>Ce projet porte sur l'implémentation et l'application de la méthode des éléments finis <strong>MEF </strong> pour résoudre des problèmes unidimensionnels en utilisant des éléments de type <strong>P1 Lagrange</strong> avec une simulation avec PYTHON, sachant j'ai quelque erreur concernant l'ordre de convergence de la methode à corrigé.</p>
+                        <a href="Projet/Projet_EF_2024.pdf" target="_blank" class="btn">Projet1</a>
+                    </li>
+                    <li>
+                        <h4> Optimisation non lineaire et Applications</h4>
+                        <p>Nous nous intéressons à l'étude de certains problèmes d'optimisation non linéaire dont les données sont non linéaires et différentiables, ainsi qu'aux différents algorithmes de résolution de ces problèmes, notamment l'application de la méthode des moindre carrés avec une simulation de quelque modelle de regression en MATLAB</p>
+                        <a href="Projet/MEMOIRE Master 2 RO.pdf" target="_blank" class="btn">Projet2</a>
+                    </li>
+                </ul>
+            </div>
+           
+
+       
+    </div>
+
+</div>
+<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('open');
+    });
+</script>
+
+</body>
+</html>
