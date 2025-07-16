@@ -19,26 +19,63 @@
         </div>
         <div class="menu">
             <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="a-propos.html">À propos</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html"><p>Accueil</p></a></li>
+                <li><a href="a-propos.html"><p>À propos</p></a></li>
+                <li><a href="Portfolio.html"><p>Portfolio</p></a></li>
+                <li><a href="contact.html"><p>Contact</p></a></li>
+                
             </ul>
         </div>
+    
         <div class="search">
-            <input class="srch" type="search" placeholder="search...">
-            <button class="btn">Rechercher</button>
+            <input id="search-input" class="srch" type="search" placeholder="search...">
+            <button class="btn" onclick="func_cherch()">Rechercher</button>
+        </div>
+        <div class="hamburger">
+            <ion-icon name="menu-outline"></ion-icon>
         </div>
     </div>
 
     <div class="content">
         <h1 id="welcome">RABAH DJEBRA</h1>
         <p class="par">
-            Étudiant en Master 2 Modélisation et Analyse Numérique à l'UFR des Sciences de Montpellier, avec un double Master en Recherche Opérationnelle et une formation complémentaire en Data Science et Machine Learning. Je combine mes compétences en mathématiques appliquées et en machine learning pour résoudre des problèmes complexes dans l'analyse des données et l'optimisation. Actuellement à la recherche d'un stage en Data Analyste et Optimisation pour appliquer mes connaissances dans un environnement professionnel.
+           Étudiant en Master 2 Modélisation et Analyse Numérique à l’Université de Montpellier, avec un double diplôme en Recherche Opérationnelle et une formation en Data Science, je réalise actuellement un stage en scientométrie à l’INRAE Montpellier. Je cherche dès septembre 2025 une opportunité en alternance, CDD, CDI ou thèse pour renforcer mes compétences en analyse, modélisation et valorisation de données
         </p>
         <button class="cn"><a href="CV/cv_rabah.pdf">Download CV</a></button>
     </div>
 </div>
 
 <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.toggle('open');
+    });
+</script>
+<script>
+    // Fonction qui effectue la recherche en fonction des mots-clés
+    function func_cherch() {
+        // Récupère la valeur entrée dans le champ de recherche
+        var query = document.getElementById("search-input").value.toLowerCase();
+        
+        // Vérifie le mot-clé entré par l'utilisateur
+        if (query.includes("accueil")) {
+            window.location.href = "index.html";
+        } else if (query.includes("portfolio")) {
+            window.location.href = "portfolio.html";
+        }else if (query.includes("projet")) {
+            window.location.href = "portfolio.html";       
+        } else if (query.includes("contact")) {
+            window.location.href = "contact.html";
+        } else if (query.includes("a propos") || query.includes("à propos")) {
+            window.location.href = "a-propos.html";
+        } else {
+            // Si aucune correspondance n'est trouvée, affiche un message ou redirige vers une page d'erreur
+            alert("Aucun résultat trouvé.");
+        }
+    }
+</script>
 </body>
 </html>

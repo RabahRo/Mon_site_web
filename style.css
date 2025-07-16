@@ -197,7 +197,7 @@ body {
     height: 100px;
 }
 
-/* Menu */
+/* Menu  Styles par défaut pour le menu */
 .menu ul {
     display: flex;
     list-style: none;
@@ -227,6 +227,18 @@ body {
 .menu ul li a p:hover {
     color: #ff5500;
 }
+/* Style pour le bouton hamburger */
+.hamburger {
+    display: none; /* Caché par défaut */
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Lorsque le menu est ouvert */
+.menu.open {
+    display: block;
+}
+
 
 /* Barre de recherche */
 .search input.srch {
@@ -236,7 +248,6 @@ body {
     background-color: whitesmoke;
     width: 200px;
 }
-
 .search button.btn {
     background: white;
     padding: 10px;
@@ -313,18 +324,90 @@ form button:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
+.port {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.port .txt h3 {
+    text-align: center;
+    color: #ff7200;
+}
+
+.port ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.port ul li {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.port ul li:last-child {
+    border-bottom: none;
+}
+
+.port h4 {
+    color: black;
+}
+
+.port .p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 10px;
+}
+
+.port .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #ff7200;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.port .btn:hover {
+    background-color: #ff5500;
+}
 
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navbar {
+    .menu ul {
+        display: none; /* Cache le menu en mobile */
         flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 1;
+    }
+    
+    .menu.open ul {
+        display: block; /* Affiche le menu quand il est ouvert */
     }
 
-    .menu ul {
-        flex-direction: column;
+    .hamburger {
+        display: block; /* Affiche le bouton hamburger en mobile */
+    }
+
+    .navbar {
+        justify-content: space-between;
         align-items: center;
     }
+
+    .menu ul li {
+        margin: 15px 0; /* Espacement vertical entre les éléments */
+    }
+
 
     .search {
         margin-top: 10px;
